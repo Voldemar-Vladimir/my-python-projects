@@ -18,6 +18,7 @@ def load():
                     listcsv.append(row)
     except Exception as e:
         print(f"Неудача, {e}\nНачинаем с нуля\n")
+        sleep(0.3)
         listcsv=[]
 def new_eat():
     while True:
@@ -25,12 +26,16 @@ def new_eat():
         try:
             data=date.today()
             category=input("Введите категорию еды: ")
+            sleep(0.3)
             calories=float(input("Сколько это калорий: "))
+            sleep(0.3)
             listcsv.append({"Дата":str(data),"Категория":category,"Калорийность":calories})
+            sleep(0.3)
             save()
             return print("Успешно"), sleep(0.5)
         except ValueError:
             print("Ошибка ввода, попробуйте еще\n")
+            sleep(1)
 def save():
     with open("calories.csv","w", encoding="utf-8", newline="") as f:
         write=csv.DictWriter(f,fieldnames=["Дата","Категория","Калорийность"])
@@ -163,6 +168,7 @@ def menu():
             else:
                 print(Fore.MAGENTA)
                 print("!!! Введите цифру от 1 до 6 !!!")
+                sleep(1)
         except ValueError:
             print(Fore.RED)
             print("Ошибка ввода\n")

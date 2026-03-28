@@ -1,6 +1,8 @@
 import datetime,csv,os,time
 import matplotlib.pyplot as plt
 from colorama import Fore
+def __init__():
+    pass
 listcsv=[]
 def load():
     global listcsv
