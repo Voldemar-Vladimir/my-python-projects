@@ -1,6 +1,0 @@
-# Игнорируемые файлы
-__pycache__/
-*.pyc
-*.log
-logs.txt
-venv/
